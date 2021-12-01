@@ -1,0 +1,104 @@
+package com.grocerymartshopping.in;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MainGS {
+	ArrayList al = new ArrayList();
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to GroceryMart");
+		Scanner sc = new Scanner(System.in);
+		MainGS ms = new MainGS();
+		Veggies v = new Veggies();
+		v.a1();
+		KitchenItems ks = new KitchenItems();
+		ks.a2();
+//		ms.chart();
+//		ms.All();
+
+//	}
+		Conditions cs = new Conditions();
+		boolean fLag = true;
+		while (fLag) {
+			System.out.println("Select 1: Adding to cart");
+			System.out.println("Select 2: View all in cart");
+			System.out.println("Select 3: Remove from cart");
+			System.out.println("Select 4: Replace item");
+			System.out.println("Select 5: Quit");
+
+			System.out.println("Enter your Choice");
+			int b = sc.nextInt();
+			switch (b) {
+			case 1:
+				cs.addGroceryIteams(sc.next());
+				break;
+			case 2:
+				cs.printGroceryItems();
+				break;
+
+			case 3:
+				cs.removeGroceryItems();
+				break;
+			case 4:
+				cs.modifyList();
+				break;
+			case 5:
+				cs.exit();
+				break;
+
+			}
+		}
+	}
+
+	String abc;
+
+	public void All() {
+		Scanner pc = new Scanner(System.in);
+		System.out.println("Select a Number");
+
+		int n = pc.nextInt();
+		switch (n) {
+		case 1:
+			abc = "Tomato Price 30 rps";
+			break;
+		case 2:
+			abc = "Carrot Price 40 rps";
+			break;
+		case 3:
+			abc = "Potato Price 50 rps";
+			break;
+		case 4:
+			abc = "Bringal Price 25 rps";
+			break;
+		case 5:
+			abc = "Chilly " + " 45 rps";
+			break;
+		case 6:
+			abc = "Sugar Price 30rps";
+			break;
+		case 7:
+			abc = "rice Price 100rps";
+			break;
+		case 8:
+			abc = "chillypower Price 75rps";
+			break;
+		case 9:
+			abc = "Salt Price 15rps";
+			break;
+		case 10:
+			abc = "Ghee Price 250rps";
+			break;
+		case 11:
+			abc = "Redrose Price 20rps";
+			break;
+		default:
+			System.out.println("Invalid Key");
+		}
+		System.out.println(abc);
+	}
+
+	public void add(int abc) {
+
+	}
+}

@@ -1,0 +1,35 @@
+package com.grocerymartshopping.in;
+
+import java.util.ArrayList;
+
+public class Veggies {
+	ArrayList al1 = new ArrayList();
+
+	public void a1() {
+		System.out.println("*****Veggies Menu*****");
+		Items it1 = new Items(1, "Tomato", 30);
+		Items it2 = new Items(2, "Carrot", 40);
+		Items it3 = new Items(3, "Potato", 50);
+		Items it4 = new Items(4, "Bringal", 25);
+		Items it5 = new Items(5, "Chilly", 45);
+
+		al1.add(it1);
+		al1.add(it2);
+		al1.add(it3);
+		al1.add(it4);
+		al1.add(it5);
+		getlist2();
+
+	}
+
+	private void getlist2() {
+		for (Object obj : al1) {
+			Items its = (Items) obj;
+			System.out
+					.println(its.getSlno() + "." + its.getItemname() + " " + "Price" + " " + its.getPrices() + " rps");
+
+		}
+
+	}
+
+}

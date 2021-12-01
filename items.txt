@@ -1,0 +1,39 @@
+package com.grocerymartshopping.in;
+
+public class Items {
+
+	private int Slno;
+	private String itemname;
+	private int prices;
+
+	public Items(int slno, String itemname, int prices) {
+		Slno = slno;
+		this.itemname = itemname;
+		this.prices = prices;
+	}
+
+	public int getSlno() {
+		return Slno;
+	}
+
+	public void setSlno(int slno) {
+		Slno = slno;
+	}
+
+	public String getItemname() {
+		return itemname;
+	}
+
+	public void setItemname(String itemname) {
+		this.itemname = itemname;
+	}
+
+	public int getPrices() {
+		return prices;
+	}
+
+	public void setPrices(int prices) {
+		this.prices = prices;
+	}
+
+}

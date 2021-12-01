@@ -1,0 +1,37 @@
+package com.grocerymartshopping.in;
+
+import java.util.ArrayList;
+
+public class KitchenItems {
+	private static ArrayList ki = new ArrayList();
+
+	public static void a2() {
+		System.out.println("*****Kitchen items*****");
+
+		Items k1 = new Items(6, "Sugar", 30);
+		Items k2 = new Items(7, "rice", 100);
+		Items k3 = new Items(8, "chillypower", 75);
+		Items k4 = new Items(9, "Salt", 15);
+		Items k5 = new Items(10, "Ghee", 250);
+		Items k6 = new Items(11, "Redrose", 20);
+		ki.add(k1);
+		ki.add(k2);
+		ki.add(k3);
+		ki.add(k4);
+		ki.add(k5);
+		ki.add(k6);
+
+		getarraylist();
+
+	}
+
+	private static void getarraylist() {
+		for (Object obj : ki) {
+			Items kit = (Items) obj;
+			System.out.println(kit.getSlno() + "." + kit.getItemname() + " " + "Price" + " " + kit.getPrices() + "rps");
+
+		}
+
+	}
+
+}
